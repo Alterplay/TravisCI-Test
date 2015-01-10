@@ -29,6 +29,7 @@ if [ ! -z "$TESTFLIGHT_TEAM_TOKEN" ] && [ ! -z "$TESTFLIGHT_API_TOKEN" ]; then
     -F dsym="@$OUTPUTDIR/$APP_NAME.app.dSYM.zip" \
     -F api_token="$TESTFLIGHT_API_TOKEN" \
     -F team_token="$TESTFLIGHT_TEAM_TOKEN" \
-    -F distribution_lists='Internal' \
+    -F distribution_lists='CI Test' \
+	-F notify=True \
     -F notes="$RELEASE_NOTES"
 fi
