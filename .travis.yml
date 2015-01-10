@@ -31,7 +31,7 @@ notifications:
 env:
   global:
   - APP_NAME="TravisTest"
-  - DEVELOPER_NAME="iPhone Distribution: Alterplay Pty Ltd (3A5U6YJ8JE)"
+  - 'DEVELOPER_NAME="iPhone Distribution: Alterplay Pty Ltd (3A5U6YJ8JE)"'
   - PROFILE_NAME="TravisAdHoc"
   - secure: pM6/7dsKx96huYjQUsRXlLrftkJwfTli+1FBco7qqAHDMQTk+D1xZhNOnOCxHptFpiESi5VXwPSO/c4P60ZHp9QcVgcaxihiq1qnYG0IIHL5edUOU+pt6Rl8ph0EywM4ZJV+3jY5igzNtHlnddJVBAzsFF043/40OyO/RkLH63Y=
   - secure: KdIZZWGDBXhc25tg70WkupzugSvRLFzGrPeZ2l43+fvDCxn+cUCrGAnIMEqMbSW72UYTkuW8Kko14niGN0xN6T/y4CI3lB41iXmRXuMCpmxSWlrCHbpx49slQQT/H1fXmF5FZ82CAitpY608PSKhqqUCJueYiKudm0T9TCXZMs8=
