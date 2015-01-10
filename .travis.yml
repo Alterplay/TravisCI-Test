@@ -1,15 +1,12 @@
 language: objective-c
-xcode_scheme: TravisTest
-
+rvm: 1.9.3
 before_install:
-        - sudo gem update --system
-        - sudo gem install cocoapods
-		- brew install ios-sim
-        - pod install
-        
-script:
-        - xcodebuild test -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-        
-notifications:
-  email:
-    - sergey@alterplay.com
+  - pod install
+  - export LANG=en_US.UTF-8
+  - brew update
+  - brew uninstall xctool
+  - brew install xctool
+
+xcode_workspace: TravisTest.xcworkspace
+xcode_scheme: TravisTest
+xcode_sdk: iphonesimulator
