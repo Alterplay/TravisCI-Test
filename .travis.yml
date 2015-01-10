@@ -10,3 +10,7 @@ before_install:
 xcode_workspace: TravisTest.xcworkspace
 xcode_scheme: TravisTest
 xcode_sdk: iphonesimulator
+
+notifications:
+  email:
+    - sergey@alterplay.com
