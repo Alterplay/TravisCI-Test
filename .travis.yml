@@ -9,3 +9,6 @@ before_install:
         - cd Spec
         - pod 
         
+notifications:
+  email:
+    - sergey@alterplay.com
