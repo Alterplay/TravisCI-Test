@@ -7,9 +7,8 @@ before_install:
   - brew uninstall xctool
   - brew install xctool
 
-xcode_workspace: TravisTest.xcworkspace
-xcode_scheme: TravisTest
-xcode_sdk: iphonesimulator
+script:
+  - xctool test -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 
 notifications:
   email:
