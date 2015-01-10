@@ -1,4 +1,5 @@
 language: objective-c
+xcode_scheme: TravisTest
 
 before_install:
         - sudo gem update --system
@@ -7,3 +8,4 @@ before_install:
         - brew install ios-sim
         - cd Spec
         - pod 
+        
