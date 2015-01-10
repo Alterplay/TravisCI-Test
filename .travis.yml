@@ -6,7 +6,6 @@ before_install:
   - brew update
   - brew uninstall xctool
   - brew install xctool
-  - sudo gem install shenzhen
 
 xcode_workspace: TravisTest.xcworkspace
 xcode_scheme: TravisTest
