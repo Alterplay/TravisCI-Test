@@ -3,13 +3,15 @@ if [[ "$TRAVIS_BRANCH" != "develop" ]]; then
   exit 0
 fi
 
+
 PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_NAME.mobileprovision"
 OUTPUTDIR="$PWD/build/Release-iphoneos"
 
 if [ ! -f PROVISIONING_PROFILE ]; then
+    echo "***************************"
     echo "Provisioning not found!"
+    echo "***************************"
 fi
-
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/$APP_NAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
 
 zip -r -9 "$OUTPUTDIR/$APP_NAME.app.dSYM.zip" "$OUTPUTDIR/$APP_NAME.app.dSYM"
