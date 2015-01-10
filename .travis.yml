@@ -13,4 +13,7 @@ xcode_sdk: iphonesimulator
 
 notifications:
   email:
-    - sergey@alterplay.com
+    recipients:
+      - sergey@alterplay.com
+    on_success: change
+    on_failure: always
