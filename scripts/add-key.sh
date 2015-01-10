@@ -21,7 +21,7 @@ security import ./scripts/certs/dist.p12 -k ~/Library/Keychains/ios-build.keycha
 
 # Put the provisioning profile in place
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-cp "./scripts/profile/$PROFILE_NAME.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+cp ./scripts/profile/* ~/Library/MobileDevice/Provisioning\ Profiles/
 
 if [ ! -f "~/Library/MobileDevice/Provisioning\ Profiles/$PROFILE_NAME.mobileprovision" ]; then
     echo "***************************"
