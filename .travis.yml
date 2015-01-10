@@ -6,6 +6,9 @@ before_install:
         - sudo gem install cocoapods
         - pod install
         
+script:
+        - xcodebuild test -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+        
 notifications:
   email:
     - sergey@alterplay.com
