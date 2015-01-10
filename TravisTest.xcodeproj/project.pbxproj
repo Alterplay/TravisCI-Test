@@ -408,7 +408,7 @@
 				INFOPLIST_FILE = TravisTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "abc86479-ba58-4b2a-9014-fd6bd3d0acfb";
+				PROVISIONING_PROFILE = "1a769614-cd59-4a1f-82d4-6841af578303";
 			};
 			name = Debug;
 		};
@@ -417,12 +417,12 @@
 			baseConfigurationReference = 15898D9052FFCD61D5738029 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Alterplay Pty Ltd (3A5U6YJ8JE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Alterplay Pty Ltd (3A5U6YJ8JE)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = TravisTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "abc86479-ba58-4b2a-9014-fd6bd3d0acfb";
+				PROVISIONING_PROFILE = "1a769614-cd59-4a1f-82d4-6841af578303";
 			};
 			name = Release;
 		};
