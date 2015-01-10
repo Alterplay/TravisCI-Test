@@ -1,19 +1,25 @@
 language: objective-c
 rvm: 1.9.3
 before_install:
-  - pod install
-  - export LANG=en_US.UTF-8
-  - brew update
-  - brew uninstall xctool
-  - brew install xctool
-
+- pod install
+- export LANG=en_US.UTF-8
+- brew update
+- brew uninstall xctool
+- brew install xctool
 script:
-  - xctool -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-  - xctool test -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-
+- xctool -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator
+  ONLY_ACTIVE_ARCH=NO
+- xctool test -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator
+  ONLY_ACTIVE_ARCH=NO
 notifications:
   email:
     recipients:
-      - sergey@alterplay.com
+    - sergey@alterplay.com
     on_success: change
     on_failure: always
+env:
+  global:
+  - APP_NAME="TravisTest"
+  - 'DEVELOPER_NAME="iPhone Distribution: Alterplay Pty Ltd (3A5U6YJ8JE)"'
+  - PROFILE_NAME="TravisAdHoc.mobileprovision"
+  - secure: pM6/7dsKx96huYjQUsRXlLrftkJwfTli+1FBco7qqAHDMQTk+D1xZhNOnOCxHptFpiESi5VXwPSO/c4P60ZHp9QcVgcaxihiq1qnYG0IIHL5edUOU+pt6Rl8ph0EywM4ZJV+3jY5igzNtHlnddJVBAzsFF043/40OyO/RkLH63Y=
