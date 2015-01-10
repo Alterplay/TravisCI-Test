@@ -30,6 +30,12 @@
     XCTAssert(YES, @"Pass");
 }
 
+- (void)testExampleFail
+{
+    // This is an example of a functional test case.
+    XCTAssert(NO, @"Pass");
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
