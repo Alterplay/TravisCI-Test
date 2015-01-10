@@ -4,6 +4,8 @@ before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/TravisAdHoc.mobileprovision.enc -d -a -out scripts/profile/TravisAdHoc.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
+- ./scripts/add-key.sh
+- ./scripts/update-bundle.sh
 before_install:
 - pod install
 - export LANG=en_US.UTF-8
@@ -20,6 +22,10 @@ notifications:
     - sergey@alterplay.com
     on_success: change
     on_failure: always
+after_script:
+	- ./scripts/remove-key.sh
+after_success:
+	- ./scripts/sign-and-upload.sh	
 env:
   global:
   - APP_NAME="TravisTest"
