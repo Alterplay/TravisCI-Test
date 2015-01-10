@@ -4,7 +4,7 @@ xcode_scheme: TravisTest
 before_install:
         - sudo gem update --system
         - sudo gem install cocoapods
-		- brew install ios-sim
+	- brew install ios-sim
         - pod install
         
 script:
