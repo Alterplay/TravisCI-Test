@@ -11,8 +11,7 @@ before_install:
 - brew uninstall xctool
 - brew install xctool
 script:
-- xctool -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator
-  ONLY_ACTIVE_ARCH=NO
+xctool -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=YES CODE_SIGN_IDENTITY="iPhone Distribution: Alterplay Pty Ltd (3A5U6YJ8JE)" PROVISIONING_PROFILE="abc86479-ba58-4b2a-9014-fd6bd3d0acfb"
 - xctool test -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator
   ONLY_ACTIVE_ARCH=NO
 notifications:
